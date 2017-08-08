@@ -11,6 +11,14 @@ class PongBot < SlackRubyBot::Bot
   command 'ping' do |client, data, match|
     client.say(text: 'pong', channel: data.channel)
   end
+
+  command 'pong' do |client, data, match|
+    client.say(text: 'ping', channel: data.channel)
+  end
+
+  command 'atari is the best'  do |client, data, match|
+    client.say(text: 'yes, of course', channel: data.channel)
+  end
 end
 
 PongBot.run
